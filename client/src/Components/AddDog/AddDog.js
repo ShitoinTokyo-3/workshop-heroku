@@ -71,6 +71,7 @@ export default function AddDog() {
 
                 addDog(inputCon)
                     .then(result =>{ 
+                        console.log(result)
                         if(result === 'llave duplicada viola restricción de unicidad «dogs_name_key»'){
                             setInputCon({...inputCon, dogUnique: false})
                         }else{
