@@ -61,7 +61,7 @@ export function filterByOrigin(origin) {
 }
 
 export const addDog  = async (data) => {
-    // try {
+
         const res = await axios({
             method: 'post',
             url: `/dog`,
@@ -69,9 +69,7 @@ export const addDog  = async (data) => {
         })
         console.log(res.data);
         return res.data;
-    // } catch (error) {
-    //     console.log(error.status);
-    // }
+
 }
 
 
