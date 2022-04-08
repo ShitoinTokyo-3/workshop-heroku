@@ -61,15 +61,17 @@ export function filterByOrigin(origin) {
 }
 
 export const addDog  = async (data) => {
-
-        const res = await axios({
-            method: 'post',
-            url: `/dog`,
-            data
-        })
-        console.log(res.data);
+    return axios({
+        method: 'post',
+        url: `/dog`,
+        data
+    })
+    .then(res => {
         return res.data;
-
+    })
+    .catch(err => {
+        return 'dog exist';
+    })
 }
 
 
